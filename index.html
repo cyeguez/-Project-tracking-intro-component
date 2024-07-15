@@ -1,39 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Project tracking intro component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
-  Features
-  Pricing
-  Login
+    <title>Frontend Mentor | Project tracking intro component</title>
 
-  New
-  Monograph Dashboard
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header>
+      <img
+        src="./images/logo.svg"
+        alt="Logo de la empresa"
+        class="header__logo"
+      />
+      <img src="./images/icon-hamburger.svg" alt="icono de menu" class="header__icon-menu" />
+      <img src="./images/icon-close.svg" alt="icono de cerrado" class="header__icon-close" />
 
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
+      <nav class="nav">
+        <ul class="nav__links">
+          <li class="link">Product</li>
+          <li class="link">Features</li>
+          <li class="link">Pricing</li>
+          <li class="link">.</li>
+          <hr class="separacion" />
+          <li class="link">Login</li>
+        </ul> 
+      </nav>
+    </header>
 
-  Schedule a demo
-  to see a live preview
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <main>
+      <div class="main__contenido">
+        <p class="contenido__enunciado">
+          <span class="contenido__enunciado--resaltado">New</span>Monograph
+          Dashboard
+        </p>
+        <h1 class="contenido__titulo">Powerful insights into your team</h1>
+        <p class="contenido__subtitulo">Project planning and time tracking for agile teams</p>
+        <div class="contenido__promo">
+          <button type="button" class="promo__boton">Schedule a demo </button>
+          <p class="promo__text">to see a live preview</p>
+        </div>
+      </div>
+
+      <div class="contenido__ilustracion">
+        <img src="./images/illustration-devices.svg" alt="Ilustración de dispositivos">
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">César Yeguez</a>.
+      </p>
+    </footer>
+  </body>
 </html>
