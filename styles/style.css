@@ -56,7 +56,7 @@ body {
       padding-inline: 1rem;
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
       transform: scale(0);
-      transition: transform .6s;
+      transition: transform 0.6s;
 
       .nav__links {
         width: 100%;
@@ -76,8 +76,8 @@ body {
           }
         }
 
-        .link:last-child{
-          color: var(--Dark-Grayish-Blue)
+        .link:last-child {
+          color: var(--Dark-Grayish-Blue);
         }
 
         .punto {
@@ -101,7 +101,7 @@ body {
 
     .main__contenido {
       margin-top: 4.5rem;
-      padding-left: 32px;
+      padding-inline: 1rem;
 
       .contenido__enunciado {
         text-transform: uppercase;
@@ -149,7 +149,7 @@ body {
           padding: 16px 18px;
           border-radius: 8px;
 
-          &:hover{
+          &:hover {
             cursor: pointer;
           }
         }
@@ -161,8 +161,9 @@ body {
     }
 
     .main__ilustracion {
+      width: 100%;
+      min-height: 270px;
       margin-top: -16rem;
-      height: 240px;
       grid-row: 1/2;
       background-image: url("../images/illustration-devices.svg");
       background-size: cover;
@@ -179,6 +180,171 @@ body {
     }
     .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    .decoracion {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      background-color: var(--Light-Grayish-Blue);
+      width: 60%;
+      height: 400px;
+      z-index: -1;
+      border-radius: 0 0 0 66px;
+    }
+
+    header {
+      max-width: 1440px;
+      margin: 0 auto;
+      font-family: var(--Barlow-condensed);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: no-wrap;
+      align-items: center;
+      padding-top: 38px;
+      padding-inline: 64px;
+
+      .header__icon-close,
+      .header__icon-menu {
+        display: none;
+      }
+
+      .nav {
+        width: 50%;
+        margin-top: 0;
+        background-color: #ffffff;
+        padding-inline: 1rem;
+        box-shadow: none;
+        transform: scale(1);
+        transition: transform 0.6s;
+        background-color: transparent;
+
+        .nav__links {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+
+          .link {
+            padding: 1rem;
+            text-transform: uppercase;
+            color: var(--Very-Dark-Blue);
+            font-weight: 700;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          .link:last-child {
+            color: var(--Dark-Grayish-Blue);
+          }
+
+          .punto {
+            display: inline;
+            
+            margin-top: -8px;
+          }
+
+          .linea {
+            
+            display: none;
+          }
+        }
+      }
+    }
+
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      margin-top: 64px;
+      padding-inline: 0 ;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows:677px ;
+      font-family: var(--Barlow);
+
+      .main__contenido {
+        grid-column: 1/2;
+        margin-top: 4.5rem;
+        padding-left: 64px;
+
+        .contenido__enunciado {
+          text-transform: uppercase;
+          font-size: 1.125rem;
+          letter-spacing: 0.1em;
+
+          .contenido__enunciado--resaltado {
+            display: inline-block;
+            margin-right: 8px;
+            background-color: var(--Very-Dark-Blue);
+            color: var(--Light-Grayish-Blue);
+            border-radius: 20px;
+            padding: 6px 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            font-family: var(--Barlow-condensed);
+          }
+        }
+        .contenido__titulo {
+          width: 50%;
+          margin-top: 20px;
+          font-size: 1.875rem;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        .contenido__subtitulo {
+          width: 42%;
+          margin-top: 20px;
+          font-size: 1.125rem;
+          color: var(--Very-Dark-Blue);
+        }
+
+        .contenido__promo {
+          margin-top: 27px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          font-size: 14px;
+
+          .promo__boton {
+            background-color: var(--Red);
+            color: var(--Light-Grayish-Blue);
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 16px 18px;
+            border-radius: 8px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          .promo__text {
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .main__ilustracion {
+        width: 100%;
+       
+        margin-top: 0;
+        grid-column: 2/3;
+        background-image: url("../images/illustration-devices.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x:200px;
+        
+      }
     }
   }
 }
