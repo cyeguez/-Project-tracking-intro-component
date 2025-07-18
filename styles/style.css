@@ -10,3 +10,128 @@
   --Barlow-condensed: "BarlowCondensed";
 }
 
+body {
+  font-family: var(--Barlow);
+  font-size: 16px;
+  margin-inline: 2rem;
+}
+
+.decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--Light-Grayish-Blue);
+  width: 50%;
+  height: 425px;
+  border-radius: 0 0 0 64px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38px;
+}
+
+.header__logo,
+.header__icon-menu,
+.header__icon-close {
+  width: 24px;
+  height: 24px;
+}
+
+.header__icon-close {
+  display: none;
+}
+
+.nav {
+  display: none;
+}
+
+/* MAIN */
+main {
+  margin-top: 4rem;
+}
+.main__illustration {
+  height: 239px;
+  background-image: url("../images/illustration-devices.svg");
+  padding: 0;
+  background-size: cover;
+  margin-right: -2rem;
+  margin-left: -1.5rem;
+  background-repeat: no-repeat;
+}
+
+.main__content {
+  margin-top: 85px;
+}
+
+.content__statement {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--Grayish-Blue);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.content__statement--resalt {
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grayish-Blue);
+  padding: 0.5rem 0.6rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+.content__title {
+  color: var(--Very-Dark-Blue);
+  font-family: var(--Barlow-condensed);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content__subtitle {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.content__promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.promo__button {
+  background-color: var(--Red);
+  color: var(--Light-Grayish-Blue);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.promo__text {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+
+footer {
+  margin-top: 4rem;
+  display: flex;  
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 2rem;
+  
+}
