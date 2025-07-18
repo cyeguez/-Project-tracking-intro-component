@@ -13,3 +13,17 @@ closeIcon.addEventListener("click", () => {
   closeIcon.style.display = "none";
   menuIcon.style.display = "block";
 });
+
+// Cerrar menú al hacer clic fuera
+document.addEventListener("click", (e) => {
+  if (
+    !nav.classList.contains("nav__hidden") &&
+    !nav.contains(e.target) &&
+    e.target !== menuIcon &&
+    e.target !== closeIcon
+  ) {
+    nav.classList.add("nav__hidden");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  }
+});
